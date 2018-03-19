@@ -1,0 +1,44 @@
+npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+npm install http-server -g
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd my-app
+  npm start
+
+===============
+npm install -g create-react-app
+create-react-app my-app
+	
+
+npm install --save react-flip-page
+npm install bootstrap --sav
+npm install --save reactstrap@next react react-dom
+npm install react-router-dom
+===>
+delete your node_modules. remove react, react-router and react-router-dom dependencies from package.json file and try to npm install react react-router react-router-dom --save. hope this will resolve your issue.
+
+
+========================
+…or create a new repository on the command line
+ echo "# react-flip-page" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/roemly/react-flip-page.git
+git push -u origin master
+…or push an existing repository from the command line
+ git remote add origin https://github.com/roemly/react-flip-page.git
+git push -u origin master
