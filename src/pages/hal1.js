@@ -27,6 +27,7 @@ class Hal1 extends Component {
 				<div className="article-line">
 					<div className="table-responsive">
 						<table className="table">
+						<tbody>
 							<tr className="text-center">
 								<th>&#216; mm</th>
 								<th>SC</th>
@@ -107,6 +108,7 @@ class Hal1 extends Component {
 								<td>4,2</td>
 								<td></td>
 							</tr>
+							</tbody>
 						</table>
 					</div>
 				</div>
@@ -122,7 +124,7 @@ class Hal1 extends Component {
             <div className="article-1">
 				<div className="article-line">
 					<h3>Aplication Tips</h3>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/zEhQGIi2s9o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<iframe title="video satu" width="560" height="315" src="https://www.youtube.com/embed/zEhQGIi2s9o" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
 				</div>
 			</div>
 			<div className="article-2">

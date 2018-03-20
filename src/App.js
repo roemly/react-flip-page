@@ -40,7 +40,6 @@ class Content extends Component {
 						<li id="hal8"><Link onClick={this.geserMenu.bind(this,'hal8')} to={'/Hal1'}>Halaman 7</Link></li>
 				 </ul>
 				</div> 
-				 <hr />
 				 <Switch>
 						 <Route exact path='/' component={Hal1} />
 						 <Route exact path='/Hal1' component={Hal1} />
