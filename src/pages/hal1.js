@@ -21,21 +21,116 @@ class Hal1 extends Component {
 	
   render() {
     return (
-    <FlipPage width="100%">
+    <FlipPage>
         <article>
-                <img className="img-responsive" src="https://akcdn.detik.net.id/community/media/visual/2018/03/18/5d662e25-013a-44e0-9a47-b754334207f1_43.jpeg?w=800&q=60"/>
+			<div className="article-1">
+				<div className="article-line">
+					<div className="table-responsive">
+						<table className="table">
+							<tr className="text-center">
+								<th>&#216; mm</th>
+								<th>SC</th>
+								<th>RR</th>
+								<th>8kgf/cm<sup>2</sup> S12,5</th>
+								<th>10kgf/cm<sup>2</sup> S12,5</th>
+								<th>10kgf/cm<sup>2</sup> S12,5</th>
+							</tr>
+							<tr>
+								<td>20</td>
+								<td>&#8226;</td>
+								<td></td>
+								<td>0,8</td>
+								<td></td>
+								<td>1,0</td>
+							</tr>
+							<tr>
+								<td>25</td>
+								<td>&#8226;</td>
+								<td></td>
+								<td>1,1</td>
+								<td></td>
+								<td>1,2</td>
+							</tr>
+							<tr>
+								<td>32</td>
+								<td>&#8226;</td>
+								<td></td>
+								<td>1,3</td>
+								<td></td>
+								<td>1,6</td>
+							</tr>
+							<tr>
+								<td>40</td>
+								<td>&#8226;</td>
+								<td></td>
+								<td>1,6</td>
+								<td></td>
+								<td>1,9</td>
+							</tr>
+							<tr>
+								<td>50</td>
+								<td>&#8226;</td>
+								<td></td>
+								<td>2,0</td>
+								<td></td>
+								<td>2,4</td>
+							</tr>
+							<tr>
+								<td>63</td>
+								<td>&#8226;</td>
+								<td>&#8226;</td>
+								<td></td>
+								<td>2,4</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>75</td>
+								<td>&#8226;</td>
+								<td>&#8226;</td>
+								<td></td>
+								<td>2,9</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>90</td>
+								<td>&#8226;</td>
+								<td>&#8226;</td>
+								<td></td>
+								<td>3,5</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>110</td>
+								<td>&#8226;</td>
+								<td>&#8226;</td>
+								<td></td>
+								<td>4,2</td>
+								<td></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div className="article-2">
+				<div className="article-line">
+					<h3>My second article</h3>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
         </article>
         <article>
-            <h1>My awesome first article</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        </article>
-        <article>
-            <h1>My wonderful second article</h1>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-        </article>
-        <article>
-            <h1>My excellent third article</h1>
-            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+            <div className="article-1">
+				<div className="article-line">
+					<h3>Aplication Tips</h3>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/zEhQGIi2s9o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div className="article-2">
+				<div className="article-line">
+					<h3>My fourth article</h3>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+			</div>
         </article>
     </FlipPage>
     );

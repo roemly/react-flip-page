@@ -4,9 +4,9 @@ body {
   font-family: sans-serif;
 }
 .menu-bar li {
-  float: left;
-  padding: 5px 10px 5px 10px;
-  list-style-type: none;
+    float: left;
+    padding: 0 8.5px;
+    list-style-type: none;
 }
 ul.menu-bar {
   position:absolute;
@@ -14,11 +14,13 @@ ul.menu-bar {
   display: block;
   width: calc(100% + 1000px);
   padding: 0;
-  height:50px;
+  height:44px;
+  padding-left:8px;
+  margin:0
 }
 #menu-box-id {
   width: calc(100%);
-  height: 50px;
+  height: 44px;
   display: block;
   position: relative;
   overflow: scroll;
@@ -27,12 +29,90 @@ ul.menu-bar {
   animation: slide 0.5s forwards;
   animation-delay: 2s;
 }
-.menu-bar li a {
-  display: block;
-  font-size: 22pt;
-  border: 1px solid;
-  padding: 0 5px 0 7px;
+.menu-bar li a:hover,.menu-bar li a:focus,.menu-bar li a:active {
+	background:#f8b713;
+	color:#000;
+	text-decoration:none;
 }
+.menu-bar li a:hover:before,.menu-bar li a:focus:before,.menu-bar li a:active:before {
+    border-right: 7px solid #f8b713;
+    border-bottom: 22px solid #f8b713;
+}
+.menu-bar li a:hover:after,.menu-bar li a:focus:after,.menu-bar li a:active:after {
+	border-left: 7px solid #f8b713;
+    border-top: 22px solid #f8b713;
+}
+.menu-bar li a {
+    display: block;
+    font-size: 15pt;
+    padding: 7px 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: #cccccc;
+    color: #fff;
+    position: relative;
+}
+.menu-bar li a:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 7px solid transparent;
+    border-right: 7px solid #ccc;
+    border-top: 22px solid transparent;
+    border-bottom: 22px solid #ccc;
+    top: 0;
+    right: 100%;
+}
+.menu-bar li a:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 7px solid #ccc;
+    border-right: 7px solid transparent;
+    border-top: 22px solid #ccc;
+    border-bottom: 22px solid transparent;
+    top: 0;
+    left: 100%;
+}
+.article-1 {
+    padding: 25px 20px;
+    height: 50%;
+	background:#f8b713;
+	position:absolute;
+	color:#fff;
+	top:0;
+	left:0;
+	width:100%;
+    text-align: justify;
+}
+article {
+    min-height: calc(100vh - 100px);
+}
+#menu-box-id+div {
+    width: 100% !important;
+}
+.table td, .table th {
+    padding: 2px 5px;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+th{vertical-align:middle !important}
+.article-2 {
+    padding: 25px 20px;
+    height: 50%;
+    text-align: justify;
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+}
+.article-line {
+    position: relative;
+    overflow-y: scroll;
+    display: block;
+    max-height: 100%;
+}
+
 .rb-switcher input{display:none}
 .rb-switcher i{
 	display:inline-block;
