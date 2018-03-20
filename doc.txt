@@ -18,15 +18,21 @@ We suggest that you begin by typing:
   cd my-app
   npm start
 
+npm install -g serve
+serve -s build
+roemly.github.io/react-flip-page
 ===============
 npm install -g create-react-app
 create-react-app my-app
 	
 
 npm install --save react-flip-page
-npm install bootstrap --sav
+npm install bootstrap --save
 npm install --save reactstrap@next react react-dom
 npm install react-router-dom
+
+#baru ditambah belum dicari cara pakainya
+npm install --save react-bootstrap
 ===>
 delete your node_modules. remove react, react-router and react-router-dom dependencies from package.json file and try to npm install react react-router react-router-dom --save. hope this will resolve your issue.
 

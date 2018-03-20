@@ -4,7 +4,6 @@ import FlipPage from 'react-flip-page';
 // using ES6 modules
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
-import logo from './logo.svg';
 import './App.css';
 import Header from './pages/header.js';
 import Hal1 from './pages/hal1.js';

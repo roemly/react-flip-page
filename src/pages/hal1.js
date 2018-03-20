@@ -21,7 +21,7 @@ class Hal1 extends Component {
 	
   render() {
     return (
-    <FlipPage>
+    <FlipPage width="100%">
         <article>
                 <img className="img-responsive" src="https://akcdn.detik.net.id/community/media/visual/2018/03/18/5d662e25-013a-44e0-9a47-b754334207f1_43.jpeg?w=800&q=60"/>
         </article>
