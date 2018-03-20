@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import FlipPage from 'react-flip-page';
+import imagepipa from '../image-pipa.JPG';
+import imagecatalog from '../catalog.jpg';
 import {
   Collapse,
   Navbar,
@@ -17,12 +19,25 @@ import {
 	Col
      } from 'reactstrap';
      
-class Hal1 extends Component {
-	
+class Content extends Component {
+
   render() {
+    const theEndStyle = {
+        alignItems: 'flex-end',
+        backgroundColor: '#ff0000',
+        color: '#fff',
+        display: 'flex',
+        justifyContent: 'center',
+        padding: 10
+      };
+      const theEnd = <div style={theEndStyle}>The End!</div>;
     return (
-    <FlipPage>
-        <article>
+        
+        <div>
+        <FlipPage
+        lastComponent={theEnd}
+        >
+            <article>
 			<div className="article-1">
 				<div className="article-line">
 					<div className="table-responsive">
@@ -115,28 +130,57 @@ class Hal1 extends Component {
 			</div>
 			<div className="article-2">
 				<div className="article-line">
-					<h3>My second article</h3>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<img src={imagepipa} />
 				</div>
 			</div>
         </article>
         <article>
             <div className="article-1">
 				<div className="article-line">
-					<h3>Aplication Tips</h3>
+					<h3 className="text-center">Aplication Tips</h3>
 					<iframe title="video satu" width="560" height="315" src="https://www.youtube.com/embed/zEhQGIi2s9o" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
 				</div>
 			</div>
 			<div className="article-2">
 				<div className="article-line">
-					<h3>My fourth article</h3>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					<table>
+						<tr>
+							<td width="49%"><img src={imagecatalog} /></td>
+							<td width="1%">&nbsp;</td>
+							<td width="50%">
+								<h3 className="text-right">Printable<br/>Catalog</h3>
+								<a href="" className="btn btn-default more">Download Now</a>
+							</td>
+						</tr>
+					</table>
 				</div>
 			</div>
         </article>
-    </FlipPage>
+        </FlipPage>
+        </div>
     );
   }
 }
 
-export default Hal1;
+class Submenu extends Component{
+    render(){
+        return (
+            <div className="filter-pipa">
+                <label className="rb-switcher left-position">Pipes <input type="checkbox" name="hak[]" value="42" /><i></i> Fittings</label>
+                <label className="rb-switcher right-position">JIS <input type="checkbox" name="hak[]" value="42" /><i></i> SNI</label>
+            </div>
+        )
+    }
+}
+class Mainview extends Component {
+	
+  render() {
+    return (
+        <div>
+         <Submenu /> 
+         <Content />        
+        </div> 
+    );
+  }
+}  
+export default Mainview;
