@@ -41,7 +41,7 @@ class Content extends Component {
 			<div className="article-1">
 				<div className="article-line">
 					<div className="table-responsive">
-						<table className="table">
+						<table className="table table-striped">
 						<tbody>
 							<tr className="text-center">
 								<th>&#216; mm</th>

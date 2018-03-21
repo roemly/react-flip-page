@@ -15,7 +15,7 @@ class Content extends Component {
 		/*document.getElementById("menu-box-id").scrollLeft=document.getElementById("menu-box-id").scrollLeft+document.getElementById(hal).getBoundingClientRect().left;*/
 		//element=document.getElementById("menu-box-id");
 		//jarak=document.getElementById("menu-box-id").scrollLeft=document.getElementById("menu-box-id").scrollLeft+document.getElementById(hal).getBoundingClientRect().left;
-		var jarak=document.getElementById("menu-box-id").scrollLeft+document.getElementById(hal).getBoundingClientRect().left;
+		var jarak=document.getElementById("menu-box-id").scrollLeft+document.getElementById(hal).getBoundingClientRect().left-15;
 		
 		document.getElementById("menu-box-id").scrollTo({
 			'behavior': 'smooth',
@@ -30,14 +30,10 @@ class Content extends Component {
 			<div>
 				<div id="menu-box-id" className="menu-box">
 				 <ul id="menu-bar-id" className="menu-bar">
-						<li id="hal1"><Link onClick={this.geserMenu.bind(this,'hal1')} to={'/'}  >Home</Link></li>
-						<li id="hal2"><Link onClick={this.geserMenu.bind(this,'hal2')} to={'/Hal1'}  >Halaman 1</Link></li>
-						<li id="hal3"><Link onClick={this.geserMenu.bind(this,'hal3')} to={'/Hal2'}>Halaman 2</Link></li>
-						<li id="hal4"><Link onClick={this.geserMenu.bind(this,'hal4')} to={'/Hal1'}>Halaman 3</Link></li>
-						<li id="hal5"><Link onClick={this.geserMenu.bind(this,'hal5')} to={'/Hal2'}>Halaman 4</Link></li>
-						<li id="hal6"><Link onClick={this.geserMenu.bind(this,'hal6')} to={'/Hal1'}>Halaman 5</Link></li>
-						<li id="hal7"><Link onClick={this.geserMenu.bind(this,'hal7')} to={'/Hal2'}>Halaman 6</Link></li>
-						<li id="hal8"><Link onClick={this.geserMenu.bind(this,'hal8')} to={'/Hal1'}>Halaman 7</Link></li>
+						<li id="hal2"><Link onClick={this.geserMenu.bind(this,'hal2')} to={'/Hal1'}>PE</Link></li>
+						<li id="hal3"><Link onClick={this.geserMenu.bind(this,'hal3')} to={'/Hal2'}>PVC</Link></li>
+						<li id="hal4"><Link onClick={this.geserMenu.bind(this,'hal4')} to={'/Hal1'}>PVC DRAINAGE</Link></li>
+						<li id="hal5"><Link onClick={this.geserMenu.bind(this,'hal5')} to={'/Hal2'}>PVC CONDUIT</Link></li>
 				 </ul>
 				</div> 
 				 <Switch>
