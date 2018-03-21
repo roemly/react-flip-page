@@ -58,6 +58,14 @@ h3 {
     font-size: 34pt !important;
     line-height: 0.8 !important;
 }
+.filter-pipa .filter-label img{opacity:0.3}
+.filter-pipa .filter-label.active img{opacity:1}
+.filter-pipa .filter-label {
+    color: #ccc;
+}
+.filter-pipa .filter-label.active {
+    color: #000;
+}
 .menu-bar li a:before {
     content: "";
     display: block;

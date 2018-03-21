@@ -161,7 +161,7 @@ import imagecatalog from '../catalog.jpg';
                                 <tr>
                                     <td width="49%"><img src={imagecatalog} /></td>
                                     <td width="1%">&nbsp;</td>
-                                    <td width="50%">
+                                    <td width="50%" className="text-right">
                                         <h3 className="text-right">Printable<br/>Catalog</h3>
                                         <a href="" className="btn btn-default more">Download Now</a>
                                     </td>
