@@ -61,5 +61,13 @@ class App extends Component {
   }
  
 }
-
+function FiterLabel(props){
+	const isActive=props.isActive;
+	const label=props.label;
+	var class_filter="filter-label";
+	if(isActive==true){
+		class_filter="filter-label active";
+	}
+	return <span className={class_filter}>{label}</span>;
+}
 export default App;
