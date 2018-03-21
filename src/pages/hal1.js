@@ -23,6 +23,9 @@ import {
 	Col
      } from 'reactstrap';
      
+import jis from '../JIS.jpg';
+import sni from '../SNI.jpg';
+
 class MainView extends Component{
 	constructor(props) {
     super(props);
@@ -65,7 +68,7 @@ class MainView extends Component{
 			<div>
 				<div className="filter-pipa">
 					<label className="rb-switcher left-position">Pipes <input type="checkbox"  name="isFitting" checked={this.state.isFitting} onChange={this.handleFittingChange} /><i></i> Fittings</label>
-					<label className="rb-switcher right-position">JIS <input type="checkbox" name="isSNI" checked={this.state.isSNI} onChange={this.handleSNIChange} /><i></i> SNI</label>
+					<label className="rb-switcher right-position"><img src={jis} /> <input type="checkbox" name="isSNI" checked={this.state.isSNI} onChange={this.handleSNIChange} /><i></i> <img src={sni} /></label>
 				</div>
 				
 				<div>
