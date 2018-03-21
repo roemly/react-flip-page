@@ -12,7 +12,7 @@ ul.menu-bar {
   position:absolute;
   left:0;
   display: block;
-  width: calc(100% + 1000px);
+  width: calc(100% + 260px);
   padding: 0;
   height:44px;
   padding-left:8px;
@@ -44,13 +44,19 @@ ul.menu-bar {
 }
 .menu-bar li a {
     display: block;
-    font-size: 15pt;
-    padding: 7px 3px;
+    font-size: 20pt;
+    padding: 2.5px 3px;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 400;
     background: #cccccc;
     color: #fff;
+    font-family: 'Passion One', cursive;
     position: relative;
+}
+h3 {
+    font-family: 'Passion One', cursive !important;
+    font-size: 34pt !important;
+    line-height: 0.8 !important;
 }
 .menu-bar li a:before {
     content: "";
@@ -90,6 +96,7 @@ article {
 }
 .filter-pipa+div > div {
     height: calc(100vh - 141px) !important;
+	width:100% !important;
 }
 #menu-box-id+div {
     width: 100% !important;
@@ -160,15 +167,12 @@ a.btn.btn-default.more {
   height:auto;
   width:70px;
 }
-.navbar-brand{padding:0}
+.navbar-brand{padding:0 !important}
 label.rb-switcher.left-position {
     float: left;
 }
 label.rb-switcher.right-position {
     float: right;
-}
-.filter-pipa {
-    padding: 0px 20px;
 }
 .rb-switcher{margin:0}
 .rb-switcher i {
@@ -178,5 +182,12 @@ label.rb-switcher.right-position {
 }
 .filter-pipa {
     padding: 7px 20px;
+	font-size:14pt;
     overflow: hidden;
+	font-family: 'Passion One', cursive;
+}
+.filter-pipa img {
+    height: 20px;
+    top: -2px;
+    position: relative;
 }
