@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import FlipPage from 'react-flip-page';
+import YouTube from 'react-youtube';
+/*
 import {
   Collapse,
   Navbar,
@@ -16,13 +18,20 @@ import {
 	Row, 
 	Col
      } from 'reactstrap';
-
+*/
 import imagepipa from '../image-pipa.JPG';
 import imagecatalog from '../catalog.jpg';     
 
     class Content extends Component {
         
           render() {
+            const opts = {
+                height: '315',
+                width: '560',
+                playerVars: { // https://developers.google.com/youtube/player_parameters
+                  autoplay: 1
+                }
+            };
             const theEndStyle = {
                 alignItems: 'flex-end',
                 backgroundColor: '#ff0000',
@@ -138,7 +147,11 @@ import imagecatalog from '../catalog.jpg';
                     <div className="article-1">
                         <div className="article-line">
                             <h3 className="text-center">Aplication Tips</h3>
-                            <iframe title="video satu" width="560" height="315" src="https://www.youtube.com/embed/zEhQGIi2s9o" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                            <YouTube
+                            videoId="zEhQGIi2s9o"
+                            opts={opts}
+                            onReady={this._onReady}
+                            />
                         </div>
                     </div>
                     <div className="article-2">

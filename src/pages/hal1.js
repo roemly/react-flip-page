@@ -1,30 +1,9 @@
 import React, { Component } from 'react';
-import FlipPage from 'react-flip-page';
-
 import PipaJIS from './hal1-pipa-jis.js';
 import PipaSNI from './hal1-pipa-sni.js';
 import FittingJIS from './hal1-fitting-jis.js';
 import FittingSNI from './hal1-fitting-sni.js';
 
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-	DropdownItem,
-	Container, 
-	Row, 
-	Col
-     } from 'reactstrap';
-     
-import jis from '../JIS.jpg';
-import sni from '../SNI.jpg';
 
 class MainView extends Component{
 	constructor(props) {
@@ -67,8 +46,8 @@ class MainView extends Component{
         return (
 			<div>
 				<div className="filter-pipa">
-					<label className="rb-switcher left-position">Pipes <input type="checkbox"  name="isFitting" checked={this.state.isFitting} onChange={this.handleFittingChange} /><i></i> Fittings</label>
-					<label className="rb-switcher right-position"><img src={jis} /> <input type="checkbox" name="isSNI" checked={this.state.isSNI} onChange={this.handleSNIChange} /><i></i> <img src={sni} /></label>
+					<label className="rb-switcher left-position"><FiterLabel label="Pipes"  isActive={!this.state.isFitting}/> <input type="checkbox"  name="isFitting" checked={this.state.isFitting} onChange={this.handleFittingChange} /><i></i> <FiterLabel label="Fittings"  isActive={this.state.isFitting}/></label>
+					<label className="rb-switcher right-position"><FiterLabel label="JIS"  isActive={!this.state.isSNI}/> <input type="checkbox" name="isSNI" checked={this.state.isSNI} onChange={this.handleSNIChange} /><i></i> <FiterLabel label="SNI"  isActive={this.state.isSNI}/></label>
 				</div>
 				
 				<div>
@@ -79,16 +58,25 @@ class MainView extends Component{
         )
     }
 }
+function FiterLabel(props){
+	const isActive=props.isActive;
+	const label=props.label;
+	var class_filter="filter-label";
+	if(isActive==true){
+		class_filter="filter-label active";
+	}
+	return <span className={class_filter}>{label}</span>;
+}
 function Content(props){
 	const isSNI = props.isSNI;
 	const isFitting = props.isFitting;
-	if(isFitting==false && isSNI==false){
+	if(isFitting===false && isSNI===false){
 		return <PipaJIS />;
-	}else if(isFitting==false && isSNI==true){
+	}else if(isFitting===false && isSNI===true){
 		return <PipaSNI />
-	}else if(isFitting==true && isSNI==false){
+	}else if(isFitting===true && isSNI===false){
 		return <FittingJIS />
-	}else if(isFitting==true && isSNI==true){
+	}else if(isFitting===true && isSNI===true){
 		return <FittingSNI />
 	}
 	return <PipaSNI />;

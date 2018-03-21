@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FlipPage from 'react-flip-page';
+/*
 import {
   Collapse,
   Navbar,
@@ -16,6 +17,7 @@ import {
 	Row, 
 	Col
      } from 'reactstrap';
+*/     
 import imagepipa from '../image-pipa.JPG';
 import imagecatalog from '../catalog.jpg';      
      class Content extends Component {
