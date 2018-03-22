@@ -47,6 +47,9 @@ class Header extends Component {
               <NavItem>
                   <NavLink tag={RouterNavLink} to="/Product">Product</NavLink>
               </NavItem>
+              <NavItem>
+                  <NavLink href="/News" >News</NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Navbar>

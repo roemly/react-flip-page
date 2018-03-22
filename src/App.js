@@ -12,6 +12,7 @@ import Hal2 from './pages/hal2.js';
 
 import News1 from './pages/news1.js';
 import News2 from './pages/news2.js';
+import News1Detail from './pages/news1-detail.js';
 
 class Tab extends Component{
 	constructor(props) {
@@ -134,6 +135,8 @@ class News extends Component {
 						 <Route exact path='/News' component={News1} />
 						 <Route exact path='/News/News1' component={News1} />
 						 <Route exact path='/News/News2' component={News2} />
+						 <Route exact path='/News/News1/Detail' component={News1Detail} />
+						 
 				 </Switch>
 			 </div>
 		 </Router>
@@ -153,8 +156,7 @@ class App extends Component {
 				 <Switch>
 				 		 <Route exact path='/' component={News} />
 						 <Route exact path='/News' component={News} />
-						 <Route exact path='/Product' component={Product} />
-						 
+						 <Route exact path='/Product' component={Product} />						 
 				 </Switch>
 		 
       </div>
