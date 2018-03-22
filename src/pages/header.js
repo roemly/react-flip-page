@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import logo from '../headerlogo.png';
 import {
   Collapse,
@@ -40,10 +41,10 @@ class Header extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">News</NavLink>
+                <NavLink href="/News">News</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Products</NavLink>
+                <NavLink href="/Product">Products</NavLink>
               </NavItem>
             </Nav>
           </Collapse>

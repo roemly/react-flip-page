@@ -10,11 +10,14 @@ import Header from './pages/header.js';
 import Hal1 from './pages/hal1.js';
 import Hal2 from './pages/hal2.js';
 
+import News1 from './pages/news1.js';
+import News2 from './pages/news2.js';
+
 class Tab extends Component{
 	constructor(props) {
 		super(props);
 		this.state = {
-			selectedTabId: '1'
+			selectedTabId: 'hal1'
 		  };
 	}
 	
@@ -78,17 +81,17 @@ class Tab extends Component{
   }
 ///////////////
 
-class Content extends Component {
+class Product extends Component {
 	
 	
 	render(){
 		const data = {
 			points: {
 			  total: [
-				{ id: 1, name: 'hal1', text: 'PE', link:'/Hal1'  },
-				{ id: 2, name: 'hal2', text: 'PVC', link: '/Hal2' },
-				{ id: 3, name: 'hal3', text: 'PVC DRAINAGE', link: '/Hal1' },
-				{ id: 4, name: 'hal4', text: 'PVC CONDUIT', link: '/Hal2' },
+				{ id: 1, name: 'hal1', text: 'PE', link:'/Product/Hal1'  },
+				{ id: 2, name: 'hal2', text: 'PVC', link: '/Product/Hal2' },
+				{ id: 3, name: 'hal3', text: 'PVC DRAINAGE', link: '/Product/Hal1' },
+				{ id: 4, name: 'hal4', text: 'PVC CONDUIT', link: '/Product/Hal2' },
 			  ]
 			}
 		  }  	
@@ -99,9 +102,38 @@ class Content extends Component {
 					<Tabs  data={ data } />
 				</div> 
 				 <Switch>
-						 <Route exact path='/' component={Hal1} />
-						 <Route exact path='/Hal1' component={Hal1} />
-						 <Route exact path='/Hal2' component={Hal2} />
+				 		 <Route exact path='/Product' component={Hal1} />
+						 <Route exact path='/Product/Hal1' component={Hal1} />
+						 <Route exact path='/Product/Hal2' component={Hal2} />
+				 </Switch>
+			 </div>
+		 </Router>
+		);
+	}
+}
+class News extends Component {
+	
+	
+	render(){
+		const data = {
+			points: {
+			  total: [
+				{ id: 1, name: 'news1', text: 'Berita', link:'/News/News1'  },
+				{ id: 2, name: 'news2', text: 'Politik', link: '/News/News2' },
+			  ]
+			}
+		  }  	
+		return(
+			<Router>
+			<div>
+				<div id="menu-box-id" className="menu-box">
+					<Tabs  data={ data } />
+				</div> 
+				 <Switch>
+				 		 <Route exact path='/' component={News1} />
+						 <Route exact path='/News' component={News1} />
+						 <Route exact path='/News/News1' component={News1} />
+						 <Route exact path='/News/News2' component={News2} />
 				 </Switch>
 			 </div>
 		 </Router>
@@ -116,7 +148,14 @@ class App extends Component {
 				<Header />
 			</div>
       <div className="content-area">
-				<Content />
+			<Router>
+				 <Switch>
+				 		 <Route exact path='/' component={News} />
+						 <Route exact path='/News' component={News} />
+						 <Route exact path='/Product' component={Product} />
+						 
+				 </Switch>
+		 </Router>
       </div>
 	</div>
 	  );
