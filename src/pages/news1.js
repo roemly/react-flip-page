@@ -16,6 +16,12 @@ import {
 	Row, 
 	Col
      } from 'reactstrap';
+	 
+import imagenews1 from '../assets/martabe.jpg';   
+import imagenews2 from '../assets/hdpe.jpg';   
+import imagenews3 from '../assets/bojongkenong.jpg';   
+import imagenews4 from '../assets/news4.jpg';   
+import imagesnews3images from '../assets/news3images.jpg';   
      
 class Content extends Component {
 
@@ -31,46 +37,80 @@ class Content extends Component {
       const theEnd = <div style={theEndStyle}>The End!</div>;
     return (
         
-        <div>
+        <div className="page-news">
         <FlipPage
         lastComponent={theEnd}
         >
-            <article >
-                <h1>Berita 1</h1>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <article>
+				<div className="block-news">
+					<div className="list-news">
+						<img className="image-news" src={imagenews1} />
+						<div className="caption-news">
+							<div className="title-news"><h1>Proyek pipa HDPE di tambang Emas Martabe</h1></div>
+							<div className="date-news">20 Januari 2018</div>
+						</div>
+					</div>
+					<div className="list-news">
+						<img className="image-news" src={imagenews2} />
+						<div className="caption-news">
+							<div className="title-news"><h1>Pipa HDPE Mulai Menggeser PVC</h1></div>
+							<div className="date-news">11 Januari 2018 </div>
+						</div>
+					</div>
+				</div>
+            </article> 
+			<article>
+				<div className="block-news">
+					<div className="list-news">
+						<img className="image-news" src={imagenews3} />
+						<div className="caption-news">
+							<div className="title-news"><h1>25 Batang Pipa HDPE Segera Masuk Area Relokasi Bojong Koneng</h1></div>
+							<div className="date-news">07 Oktober 2017</div>
+						</div>
+					</div>
+					<div className="list-news">
+						<img className="image-news" src={imagenews4} />
+						<div className="caption-news">
+							<div className="title-news"><h1>Pipa PDAM TKR Bocor, Warga Tanah Tinggi Beli Air Galon</h1></div>
+							<div className="date-news">06 Februari 2017</div>
+						</div>
+					</div>
+				</div>
+            </article>
+			<article>
+				<div className="block-news-detail">
+					<div className="image-news-detai"><img className="image-news" src={imagenews3} /></div>
+					<div className="caption-news">
+						<div className="title-news"><h1>25 Batang Pipa HDPE Segera Masuk Area Relokasi Bojong Koneng</h1></div>
+						<div className="date-news">07 Oktober 2017</div>
+						<div className="description-news">
+							<p>BOGOR – PDAM Tirta Pakuan Kota Bogor telah menyusun rencana relokasi pipa AC 18“ di area longsor Kampung Bojong Koneng Desa Ciherang Pondok Kecamatan Caringin Kabupaten Bogor.</p>
+						</div>
+					</div>
+				</div>
             </article>
             <article>
-                <h1>My wonderful second article</h1>
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+				<div className="block-news-detail">
+					<div className="caption-news">
+						<div className="description-news">
+							<p>Sebanyak 25 batang pipa HDPE 18” (sebagai pengganti pipa AC) sudah tersedia dan segera diakut menuju area relokasi.</p>
+							<p>Direktur Teknik PDAM Tirta Pakuan Kota Bogor Syaban Maulana mengatakan pihaknya akan memindahkan pipa AC 18” sepanjang 150 meter dan menggantinya dengan pipa baru jenis HDPE 18”. PDAM telah berkoordinasi dengan pengembang proyek jalan Tol Bocimi untuk memudahkan mobilisasi dan pengangkutan pipa ukuran besar itu.</p>
+						</div>
+					</div>
+				</div>
             </article>
             <article>
-                <h1>My excellent third article</h1>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+				<div className="block-news-detail">
+					<div className="caption-news">
+						<div className="description-news">
+							<p>“Alhamdulillah, kita sudah diberi akses oleh pengembang Bocimi untuk pengiriman truk-truk pengangkut pipa HDPE 18”. Hanya untuk masuk ke area relokasi, pipa tidak bisa masuk karena hanya ada jalan setapak sepanjang 600 meter yang licin saat hujan,” kata Syaban di sela-sela meninjau area relokasi, Jumat (6/10/2017).</p>
+						</div>
+					</div>
+				</div>
             </article>
         </FlipPage>
         </div>
     );
   }
 }
-
-class Submenu extends Component{
-    render(){
-        return (
-            <div>
-                <label className="rb-switcher"><input type="checkbox" name="hak[]" value="42" /><i></i> Dashboard</label>
-            </div>
-        )
-    }
-}
-class Mainview extends Component {
-	
-  render() {
-    return (
-        <div>
-         <Submenu /> 
-         <Content />        
-        </div> 
-    );
-  }
-}  
-export default Mainview;
+export default Content;

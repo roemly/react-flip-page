@@ -29,23 +29,23 @@ ul.menu-bar {
   animation: slide 0.5s forwards;
   animation-delay: 2s;
 }
-.menu-bar li a:hover,.menu-bar li a:focus,.menu-bar li a:active {
+.menu-bar li a:hover,.menu-bar li a:focus,.menu-bar li a:active,.menu-bar li.active a {
 	background:#f8b713;
 	color:#000;
 	text-decoration:none;
 }
-.menu-bar li a:hover:before,.menu-bar li a:focus:before,.menu-bar li a:active:before {
+.menu-bar li a:hover:before,.menu-bar li a:focus:before,.menu-bar li a:active:before,.menu-bar li.active a:before {
     border-right: 7px solid #f8b713;
-    border-bottom: 22px solid #f8b713;
+    border-bottom: 21px solid #f8b713;
 }
-.menu-bar li a:hover:after,.menu-bar li a:focus:after,.menu-bar li a:active:after {
+.menu-bar li a:hover:after,.menu-bar li a:focus:after,.menu-bar li a:active:after,.menu-bar li.active a:after {
 	border-left: 7px solid #f8b713;
-    border-top: 22px solid #f8b713;
+    border-top: 21px solid #f8b713;
 }
 .menu-bar li a {
     display: block;
     font-size: 20pt;
-    padding: 2.5px 3px;
+    padding: 2.5px 3px 1px;
     text-transform: uppercase;
     font-weight: 400;
     background: #cccccc;
@@ -72,8 +72,8 @@ h3 {
     position: absolute;
     border-left: 7px solid transparent;
     border-right: 7px solid #ccc;
-    border-top: 22px solid transparent;
-    border-bottom: 22px solid #ccc;
+    border-top: 21px solid transparent;
+    border-bottom: 21px solid #ccc;
     top: 0;
     right: 100%;
 }
@@ -102,7 +102,7 @@ h3 {
 }
 
 article {
-    min-height: calc(100vh - 200px);
+    min-height: calc(100vh - 134px);
 }
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: #ffff9a !important;
@@ -112,7 +112,7 @@ article {
 }
 table{color:#000}
 .filter-pipa+div > div {
-    height: calc(100vh - 200px) !important;
+    height: calc(100vh - 134px) !important;
 	width:100% !important;
 }
 .article-2 {
@@ -217,9 +217,12 @@ label.rb-switcher.right-position {
 .navbar-collapse a {
     text-align: left;
     padding: 10px 20px !important;
+	font-family:'Passion One', cursive;
     display: block;
+	font-size:15pt;
     border-top: 1px solid #eee;
 }
+.navbar{padding:.8rem 1rem !important}
 .navbar-collapse ul{
 	box-shadow:0 0 10px #000
 }
@@ -238,4 +241,76 @@ button.navbar-toggler {
     left: 0;
     top: 100%;
     background: #fff;
+}
+.navbar-toggler:focus {
+    border: 0;
+    outline: none;
+}
+.caption-news {
+    padding: 10px 20px 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+	box-shadow:0 -90px 114px -40px #000 inset;
+}
+.date-news {
+    text-align: left;
+}
+.title-news h1 {
+    text-transform: uppercase;
+	margin-bottom:0;
+    font-family: 'Passion One', cursive;
+    font-size: 1.6rem;
+    text-align: left;
+	line-height:0.9;
+}
+.list-news {
+    position: relative;
+}
+.block-news{
+	height:calc(100vh - 134px);
+	width:100%;
+}
+.list-news {
+    position: absolute;
+    width: 100%;
+	top:0;
+    height: 50%;
+    overflow: hidden;
+}
+.list-news:last-child {
+	bottom:0;
+	top:auto
+}
+#menu-box-id+div > div:last-child > div {
+    width: 100% !important;
+	height:calc(100vh - 134px) !important;
+}
+.image-news {
+    height: auto;
+    width: auto;
+    min-width: 100%;
+    min-height: 100%;
+}
+.description-news {
+    text-align: left;
+}
+.block-news-detail .caption-news {
+    position: relative;
+    color: #000;
+    box-shadow: none;
+	padding:20px 20px 20px;
+}
+.block-news-detail .date-news {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+.image-news-detai {
+    max-height: calc(50vh - 67px);
+    overflow: hidden;
+    display: block;
+}
+body .page-news > div,body .page-news > div > div,#menu-box-id+div.page-news > div:last-child > div,.page-news article{
+    height: calc(100vh - 103px) !important;
 }

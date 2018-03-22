@@ -3,8 +3,8 @@ import PipaJIS from './hal1-pipa-jis.js';
 import PipaSNI from './hal1-pipa-sni.js';
 import FittingJIS from './hal1-fitting-jis.js';
 import FittingSNI from './hal1-fitting-sni.js';
-import imgjis from '../JIS.jpg';
-import imgsni from '../SNI.jpg';
+import imgjis from '../assets/JIS.jpg';
+import imgsni from '../assets/SNI.jpg';
 
 class MainView extends Component{
 	constructor(props) {
