@@ -306,7 +306,7 @@ button.navbar-toggler {
     border-bottom: 1px solid #ccc;
     margin-bottom: 15px;
 }
-.image-news-detai {
+.image-news-detail {
     max-height: calc(50vh - 67px);
     overflow: hidden;
     display: block;

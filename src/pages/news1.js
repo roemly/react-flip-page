@@ -79,7 +79,7 @@ class Content extends Component {
             </article>
 			<article>
 				<div className="block-news-detail">
-					<div className="image-news-detai"><img className="image-news" src={imagenews3} /></div>
+					<div className="image-news-detail"><img className="image-news" src={imagenews3} /></div>
 					<div className="caption-news">
 						<div className="title-news"><h1>25 Batang Pipa HDPE Segera Masuk Area Relokasi Bojong Koneng</h1></div>
 						<div className="date-news">07 Oktober 2017</div>
