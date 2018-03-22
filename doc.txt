@@ -31,6 +31,8 @@ npm install bootstrap --save
 npm install --save reactstrap@next react react-dom
 npm install react-router-dom
 npm install react-youtube
+npm install --save react-table
+npm install namor --save
 #baru ditambah belum dicari cara pakainya
 npm install --save react-bootstrap
 ===>

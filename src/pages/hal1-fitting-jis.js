@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import FlipPage from 'react-flip-page';
+
+// Import React Table
+import { makeData, Logo, Tips } from "../pages/data-table.js";
+import ReactTable from "react-table";
+import "react-table/react-table.css";
 /*
 import {
   Collapse,
@@ -42,90 +47,7 @@ import imagecatalog from '../assets/catalog.jpg';
                         <div className="article-line">
                             <div className="table-responsive">
                             <h1>Fitting JIS</h1>
-                                <table className="table table-striped">
-                                <tbody>
-                                    <tr className="text-center">
-                                        <th>&#216; mm</th>
-                                        <th>SC</th>
-                                        <th>RR</th>
-                                        <th>8kgf/cm<sup>2</sup> S12,5</th>
-                                        <th>10kgf/cm<sup>2</sup> S12,5</th>
-                                        <th>10kgf/cm<sup>2</sup> S12,5</th>
-                                    </tr>
-                                    <tr>
-                                        <td>20</td>
-                                        <td>&#8226;</td>
-                                        <td></td>
-                                        <td>0,8</td>
-                                        <td></td>
-                                        <td>1,0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>25</td>
-                                        <td>&#8226;</td>
-                                        <td></td>
-                                        <td>1,1</td>
-                                        <td></td>
-                                        <td>1,2</td>
-                                    </tr>
-                                    <tr>
-                                        <td>32</td>
-                                        <td>&#8226;</td>
-                                        <td></td>
-                                        <td>1,3</td>
-                                        <td></td>
-                                        <td>1,6</td>
-                                    </tr>
-                                    <tr>
-                                        <td>40</td>
-                                        <td>&#8226;</td>
-                                        <td></td>
-                                        <td>1,6</td>
-                                        <td></td>
-                                        <td>1,9</td>
-                                    </tr>
-                                    <tr>
-                                        <td>50</td>
-                                        <td>&#8226;</td>
-                                        <td></td>
-                                        <td>2,0</td>
-                                        <td></td>
-                                        <td>2,4</td>
-                                    </tr>
-                                    <tr>
-                                        <td>63</td>
-                                        <td>&#8226;</td>
-                                        <td>&#8226;</td>
-                                        <td></td>
-                                        <td>2,4</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>75</td>
-                                        <td>&#8226;</td>
-                                        <td>&#8226;</td>
-                                        <td></td>
-                                        <td>2,9</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>90</td>
-                                        <td>&#8226;</td>
-                                        <td>&#8226;</td>
-                                        <td></td>
-                                        <td>3,5</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>110</td>
-                                        <td>&#8226;</td>
-                                        <td>&#8226;</td>
-                                        <td></td>
-                                        <td>4,2</td>
-                                        <td></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                            <TableData />
                             </div>
                         </div>
                     </div>
@@ -163,4 +85,65 @@ import imagecatalog from '../assets/catalog.jpg';
             );
           }
 }
+class TableData extends React.Component {
+    constructor() {
+      super();
+      this.state = {
+        data: makeData()
+      };
+    }
+    render() {
+      const { data } = this.state;
+      return (
+        <div>
+          <ReactTable
+            data={data}
+            columns={[
+              {
+                Header: "Name",
+                columns: [
+                  {
+                    Header: "First Name",
+                    accessor: "firstName"
+                  },
+                  {
+                    Header: "Last Name",
+                    id: "lastName",
+                    accessor: d => d.lastName
+                  }
+                ]
+              },
+              {
+                Header: "Info",
+                columns: [
+                  {
+                    Header: "Age",
+                    accessor: "age"
+                  },
+                  {
+                    Header: "Status",
+                    accessor: "status"
+                  }
+                ]
+              },
+              {
+                Header: 'Stats',
+                columns: [
+                  {
+                    Header: "Visits",
+                    accessor: "visits"
+                  }
+                ]
+              }
+            ]}
+            defaultPageSize={10}
+            className="-striped -highlight"
+          />
+          <br />
+          <Tips />
+          <Logo />
+        </div>
+      );
+    }
+  }
 export default Content;
