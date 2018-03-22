@@ -306,15 +306,11 @@ button.navbar-toggler {
     border-bottom: 1px solid #ccc;
     margin-bottom: 15px;
 }
-.image-news-detail {
+.image-news-detai {
     max-height: calc(50vh - 67px);
     overflow: hidden;
     display: block;
 }
 body .page-news > div,body .page-news > div > div,#menu-box-id+div.page-news > div:last-child > div,.page-news article{
     height: calc(100vh - 103px) !important;
-	width:100% !important
-}
-.navbar-collapse{
-    overflow: hidden;
 }
