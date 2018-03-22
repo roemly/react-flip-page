@@ -5,14 +5,47 @@ import FlipPage from 'react-flip-page';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 import './App.css';
+
 import Header from './pages/header.js';
 import Hal1 from './pages/hal1.js';
 import Hal2 from './pages/hal2.js';
 
-class Content extends Component {
+class Tab extends Component{
+	constructor(props) {
+		super(props);
+		this.state = {
+			selectedTabId: '1'
+		  };
+	}
 	
+	render() {
+	  return (<li id={this.props.name}
+		className={ this.props.isActive ? 'menu-top active': 'menu-top' }
+		onClick={ this.props.onActiveTab }
+	  >
+		<Link to={this.props.link}>{this.props.text}</Link>
+	  </li>);
+	}
+  };
+  
+  class Tabs extends Component{
+	constructor(props) {
+		super(props);
+		this.state = {
+			selectedTabId: '1'
+		  }; 
+	}
+	
+	isActive(id) {
+	  return this.state.selectedTabId === id;
+	}
+	
+	setActiveTab(selectedTabId,hal) {
+		
+		this.setState({ selectedTabId });
+		this.geserMenu(hal);
+	}
 	geserMenu(hal){
-		/*document.getElementById("menu-box-id").scrollLeft=document.getElementById("menu-box-id").scrollLeft+document.getElementById(hal).getBoundingClientRect().left;*/
 		//element=document.getElementById("menu-box-id");
 		//jarak=document.getElementById("menu-box-id").scrollLeft=document.getElementById("menu-box-id").scrollLeft+document.getElementById(hal).getBoundingClientRect().left;
 		var jarak=document.getElementById("menu-box-id").scrollLeft+document.getElementById(hal).getBoundingClientRect().left-15;
@@ -22,19 +55,48 @@ class Content extends Component {
 			'left': jarak,
 			'top': 0
 		});
+		
 		return false;
 	}
 	render(){
+	  var total = this.props.data.points.total,
+		  tabs = total.map(function (el, i) {
+			return (<Tab 
+			  key={ i }
+			  link={ el.link }
+			  name={ el.name } 
+			  text={ el.text } 
+			  isActive={ this.isActive(el.id) } 
+			  onActiveTab={this.setActiveTab.bind(this, el.id, el.name)}
+			/>)
+		  }, this);
+				  
+	  return (<ul  id="menu-bar-id" className="menu-bar">
+	   { tabs }
+	  </ul>);
+	}
+  }
+///////////////
+
+class Content extends Component {
+	
+	
+	render(){
+		const data = {
+			points: {
+			  total: [
+				{ id: 1, name: 'hal1', text: 'PE', link:'/Hal1'  },
+				{ id: 2, name: 'hal2', text: 'PVC', link: '/Hal2' },
+				{ id: 3, name: 'hal3', text: 'PVC DRAINAGE', link: '/Hal1' },
+				{ id: 4, name: 'hal4', text: 'PVC CONDUIT', link: '/Hal2' },
+			  ]
+			}
+		  }  	
 		return(
 			<Router>
 			<div>
 				<div id="menu-box-id" className="menu-box">
-				 <ul id="menu-bar-id" className="menu-bar">
-						<li id="hal2"><Link onClick={this.geserMenu.bind(this,'hal2')} to={'/Hal1'}>PE</Link></li>
-						<li id="hal3"><Link onClick={this.geserMenu.bind(this,'hal3')} to={'/Hal2'}>PVC</Link></li>
-						<li id="hal4"><Link onClick={this.geserMenu.bind(this,'hal4')} to={'/Hal1'}>PVC DRAINAGE</Link></li>
-						<li id="hal5"><Link onClick={this.geserMenu.bind(this,'hal5')} to={'/Hal2'}>PVC CONDUIT</Link></li>
-				 </ul>
+					<Tabs  data={ data } />
 				</div> 
 				 <Switch>
 						 <Route exact path='/' component={Hal1} />
