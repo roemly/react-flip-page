@@ -107,6 +107,9 @@ article {
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: #ffff9a !important;
 }
+.table-striped tbody tr:nth-of-type(odd) td:nth-child(1),.table-striped tbody tr:nth-of-type(odd) td:nth-child(2),.table-striped tbody tr:nth-of-type(odd) td:nth-child(3){
+	background:#ccc
+}
 .table-striped tbody tr:nth-of-type(even) {
     background-color: #fff;
 }
