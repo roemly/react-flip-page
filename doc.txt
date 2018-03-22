@@ -58,3 +58,10 @@ git pull -X theirs
 If you're already in conflicted state...
 
 git checkout --theirs path/to/file
+
+git status
+
+#jika ada konflik dan sudah di resolve
+git add <file yang conflict
+git commit -m "sdfsf"
+git push

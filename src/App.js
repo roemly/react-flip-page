@@ -143,21 +143,23 @@ class News extends Component {
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <Router>
+			<div className="App">
 			<div>
 				<Header />
 			</div>
       <div className="content-area">
-			<Router>
+			
 				 <Switch>
 				 		 <Route exact path='/' component={News} />
 						 <Route exact path='/News' component={News} />
 						 <Route exact path='/Product' component={Product} />
 						 
 				 </Switch>
-		 </Router>
+		 
       </div>
-	</div>
+		</div>
+	</Router>
 	  );
   }
  

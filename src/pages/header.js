@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+
+import { BrowserRouter as Router, Route, Switch, Link,  NavLink as RouterNavLink } from 'react-router-dom';
 import logo from '../headerlogo.png';
 import {
   Collapse,
@@ -37,14 +38,14 @@ class Header extends Component {
       <div>
         <Navbar color="faded" light expand="md">
           <NavbarBrand href="/"><div className="logo"><img src={logo} /></div></NavbarBrand>
-		<NavbarToggler onClick={this.toggle} />
+		      <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/News">News</NavLink>
+                  <NavLink tag={RouterNavLink} to="/News" >News</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/Product">Products</NavLink>
+                  <NavLink tag={RouterNavLink} to="/Product">Product</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
