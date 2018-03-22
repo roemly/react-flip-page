@@ -102,7 +102,7 @@ h3 {
 }
 
 article {
-    min-height: calc(100vh - 134px);
+    min-height: calc(100vh - 189px);
 }
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: #ffff9a !important;
@@ -115,7 +115,7 @@ article {
 }
 table{color:#000}
 .filter-pipa+div > div {
-    height: calc(100vh - 134px) !important;
+    height: calc(100vh - 189px) !important;
 	width:100% !important;
 }
 .article-2 {
@@ -272,8 +272,9 @@ button.navbar-toggler {
     position: relative;
 }
 .block-news{
-	height:calc(100vh - 134px);
-	width:100%;
+	height:calc(100vh - 158px);
+    width:100%;
+    position: relative;
 }
 .list-news {
     position: absolute;
@@ -288,7 +289,7 @@ button.navbar-toggler {
 }
 #menu-box-id+div > div:last-child > div {
     width: 100% !important;
-	height:calc(100vh - 134px) !important;
+	height:calc(100vh - 199px) !important;
 }
 .image-news {
     height: auto;
@@ -316,7 +317,7 @@ button.navbar-toggler {
     display: block;
 }
 body .page-news > div,body .page-news > div > div,#menu-box-id+div.page-news > div:last-child > div,.page-news article{
-    height: calc(100vh - 103px) !important;
+    height: calc(100vh - 158px) !important;
 }
 .page-news > div{width:100% !important}
 .list-news a {
