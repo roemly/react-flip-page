@@ -313,4 +313,5 @@ button.navbar-toggler {
 }
 body .page-news > div,body .page-news > div > div,#menu-box-id+div.page-news > div:last-child > div,.page-news article{
     height: calc(100vh - 103px) !important;
+	width:100% !important
 }
