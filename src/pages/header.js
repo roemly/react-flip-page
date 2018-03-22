@@ -36,6 +36,17 @@ class Header extends Component {
       <div>
         <Navbar color="faded" light expand="md">
           <NavbarBrand href="/"><div className="logo"><img src={logo} /></div></NavbarBrand>
+		<NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="/components/">News</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="https://github.com/reactstrap/reactstrap">Products</NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
         </Navbar>
       </div>
     );

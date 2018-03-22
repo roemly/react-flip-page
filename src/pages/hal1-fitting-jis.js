@@ -42,7 +42,7 @@ import imagecatalog from '../catalog.jpg';
                         <div className="article-line">
                             <div className="table-responsive">
                             <h1>Fitting JIS</h1>
-                                <table className="table">
+                                <table className="table table-striped">
                                 <tbody>
                                     <tr className="text-center">
                                         <th>&#216; mm</th>
