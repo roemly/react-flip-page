@@ -29,7 +29,7 @@ import imagecatalog from '../catalog.jpg';
                 height: '315',
                 width: '560',
                 playerVars: { // https://developers.google.com/youtube/player_parameters
-                  autoplay: 1
+                  autoplay: 0
                 }
             };
             const theEndStyle = {
@@ -149,7 +149,7 @@ import imagecatalog from '../catalog.jpg';
                             <h3 className="text-center">Aplication Tips</h3>
                             <YouTube
                             videoId="zEhQGIi2s9o"
-                            opts={opts}
+                            opts={opts}   
                             onReady={this._onReady}
                             />
                         </div>
@@ -161,7 +161,7 @@ import imagecatalog from '../catalog.jpg';
                                 <tr>
                                     <td width="49%"><img src={imagecatalog} /></td>
                                     <td width="1%">&nbsp;</td>
-                                    <td width="50%" className="text-right">
+                                    <td width="50%">
                                         <h3 className="text-right">Printable<br/>Catalog</h3>
                                         <a href="" className="btn btn-default more">Download Now</a>
                                     </td>

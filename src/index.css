@@ -88,6 +88,7 @@ h3 {
     top: 0;
     left: 100%;
 }
+
 .article-1 {
     padding: 25px 20px;
     height: 50%;
@@ -99,8 +100,9 @@ h3 {
 	width:100%;
     text-align: justify;
 }
+
 article {
-    min-height: calc(100vh - 141px);
+    min-height: calc(100vh - 200px);
 }
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: #ffff9a !important;
@@ -110,9 +112,25 @@ article {
 }
 table{color:#000}
 .filter-pipa+div > div {
-    height: calc(100vh - 141px) !important;
+    height: calc(100vh - 200px) !important;
 	width:100% !important;
 }
+.article-2 {
+    padding: 15px 20px 0;
+    height: 50%;
+    text-align: justify;
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+}
+.article-line {
+    position: relative;
+    overflow-y: scroll;
+    display: block;
+    max-height: 100%;
+}
+
 #menu-box-id+div {
     width: 100% !important;
 }
@@ -139,21 +157,7 @@ a.btn.btn-default.more {
     color: #000;
     border-radius: 0;
 }
-.article-2 {
-    padding: 15px 20px 0;
-    height: 50%;
-    text-align: justify;
-	position:absolute;
-	bottom:0;
-	left:0;
-	width:100%;
-}
-.article-line {
-    position: relative;
-    overflow-y: scroll;
-    display: block;
-    max-height: 100%;
-}
+
 
 .rb-switcher input{display:none}
 .rb-switcher i{

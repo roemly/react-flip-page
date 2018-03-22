@@ -138,7 +138,7 @@ import imagecatalog from '../catalog.jpg';
                     <div className="article-1">
                         <div className="article-line">
                             <h3 className="text-center">Aplication Tips</h3>
-                            <iframe title="video satu" width="560" height="315" src="https://www.youtube.com/embed/zEhQGIi2s9o" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                            <p>Lorem ipsum dolor sit amet, vel id odio utinam, patrioque necessitatibus eos eu. Ius cu meis utroque praesent, vim fugit ubique ut. Qui ex zril munere voluptaria, ea labores salutandi patrioque eum. Nec eu tempor definiebas, aeque tollit nam eu, quis appareat molestiae pro te. Ferri illud altera mea cu, sit no harum tibique inciderint. Veri utamur ullamcorper duo et, cu primis repudiare prodesset has.</p>
                         </div>
                     </div>
                     <div className="article-2">
