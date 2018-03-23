@@ -33,6 +33,7 @@ npm install react-router-dom
 npm install react-youtube
 npm install --save react-table
 npm install namor --save
+npm install --save-dev sw-precache-webpack-plugin
 #baru ditambah belum dicari cara pakainya
 npm install --save react-bootstrap
 ===>
