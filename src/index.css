@@ -293,7 +293,7 @@ button.navbar-toggler {
 }
 #menu-box-id+div > div:last-child > div {
     width: 100% !important;
-	height:calc(100vh - 199px) !important;
+	height:calc(100vh - 149px) !important;
 }
 .image-news {
     height: auto;
