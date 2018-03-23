@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FlipPage from 'react-flip-page';
+import YouTube from 'react-youtube';
 /*
 import {
   Collapse,
@@ -23,6 +24,13 @@ import imagecatalog from '../assets/catalog.jpg';
      class Content extends Component {
         
           render() {
+			const opts = {
+                height: '315',
+                width: '560',
+                playerVars: { // https://developers.google.com/youtube/player_parameters
+                  autoplay: 0
+                }
+            };
             const theEndStyle = {
                 alignItems: 'flex-end',
                 backgroundColor: '#ff0000',
@@ -40,7 +48,6 @@ import imagecatalog from '../assets/catalog.jpg';
                     <div className="article-1">
                         <div className="article-line">
                             <div className="table-responsive">
-                            <h1>Pipa SNI</h1>
                                 <table className="table table-striped">
                                 <tbody>
                                     <tr className="text-center">
@@ -137,8 +144,12 @@ import imagecatalog from '../assets/catalog.jpg';
                 <article>
                     <div className="article-1">
                         <div className="article-line">
-                            <h3 className="text-center">Aplication Tips</h3>
-                            <p>Lorem ipsum dolor sit amet, vel id odio utinam, patrioque necessitatibus eos eu. Ius cu meis utroque praesent, vim fugit ubique ut. Qui ex zril munere voluptaria, ea labores salutandi patrioque eum. Nec eu tempor definiebas, aeque tollit nam eu, quis appareat molestiae pro te. Ferri illud altera mea cu, sit no harum tibique inciderint. Veri utamur ullamcorper duo et, cu primis repudiare prodesset has.</p>
+                             <h3 className="text-center">Aplication Tips</h3>
+                            <YouTube
+                            videoId="zEhQGIi2s9o"
+                            opts={opts}   
+                            onReady={this._onReady}
+                            />
                         </div>
                     </div>
                     <div className="article-2">
