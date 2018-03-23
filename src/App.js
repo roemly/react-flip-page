@@ -109,9 +109,9 @@ class Product extends Component {
 			points: {
 			  total: [
 				{ id: 1, name: 'hal1', text: 'PE', link:'/Product/Hal1'  },
-				{ id: 2, name: 'hal2', text: 'PVC', link: '/Product/Hal2' },
+				{ id: 2, name: 'hal2', text: 'PVC', link: '/Product/Hal1' },
 				{ id: 3, name: 'hal3', text: 'PVC DRAINAGE', link: '/Product/Hal1' },
-				{ id: 4, name: 'hal4', text: 'PVC CONDUIT', link: '/Product/Hal2' },
+				{ id: 4, name: 'hal4', text: 'PVC CONDUIT', link: '/Product/Hal1' },
 			  ]
 			}
 		  }  	
@@ -134,16 +134,17 @@ class News extends Component {
 	route_content(url1,url2) {
 				url1=url1===undefined?'':url1;
 				url2=url2===undefined?'':url2;
-				if(url1==''){
+				if(url1=='' && url2==''){
 					return <News1 />;
 				}
-				if(url1=='News1'){
+				if(url1=='News1' && url2==''){
 					return <News1 />;
 				}
-				if(url1=='News2'){
+				if(url1=='News2' && url2==''){
 					return <News2 />;
 				}
-				if(url2=='Detail'){
+				if( url1!='' && url2=='Detail'){
+					console.log('a');
 					return <News1Detail />;
 				}
 	}
