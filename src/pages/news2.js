@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FlipPage from 'react-flip-page';
+import { NavLink as RouterNavLink } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -16,6 +17,18 @@ import {
 	Row, 
 	Col
      } from 'reactstrap';
+	 
+import imagenews1 from '../assets/martabe.jpg';   
+import imagenews2 from '../assets/hdpe.jpg';   
+import imagenews3 from '../assets/bojongkenong.jpg';  	 
+import imagenews8 from '../assets/news8.jpg';   
+import imagenews9 from '../assets/news9.jpg';   
+import imagenews10 from '../assets/news10.jpg';   
+import imagenews4 from '../assets/news4.jpg';   
+import imagenews5 from '../assets/news5.jpg';   
+import imagenews6 from '../assets/news6.jpg';   
+import imagenews7 from '../assets/news7.jpg';   
+import imagesnews3images from '../assets/news3images.jpg';   
      
 class Content extends Component {
 
@@ -31,46 +44,98 @@ class Content extends Component {
       const theEnd = <div style={theEndStyle}>The End!</div>;
     return (
         
-        <div>
+        <div className="page-news">
         <FlipPage
         lastComponent={theEnd}
         >
-            <article >
-                <h1>Berita 2</h1>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </article>
-            <article>
-                <h1>My wonderful second article</h1>
-                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-            </article>
-            <article>
-                <h1>My excellent third article</h1>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+            <article className="first_block">
+				<div className="block-news">
+					<div className="list-news">
+					<NavLink tag={RouterNavLink} to="/News/News1/Detail" >
+						<div className="image-news-thunmbnail">
+							<img className="image-news" src={imagenews8} />
+						</div>
+						<div className="caption-news">
+							<div className="title-news"><h1>Terdampak Proyek LRT, Pipa Air di Gatsu Direlokasi</h1></div>
+							<div className="date-news">20 Januari 2018</div>
+						</div>
+					</NavLink>
+					</div>
+					<div className="list-news">
+					<NavLink tag={RouterNavLink} to="/News/News1/Detail" >
+						<div className="image-news-thunmbnail">
+							<img className="image-news" src={imagenews10} />
+						</div>
+						<div className="caption-news">
+							<div className="title-news"><h1>PDAM Bogor Kebut Pemasangan Pipa Cimanggu</h1></div>
+							<div className="date-news">10 Februari 2018</div>
+						</div>
+					</NavLink>	
+					</div>
+					<div className="list-news">
+						<NavLink tag={RouterNavLink} to="/News/News1/Detail" >
+							<div className="image-news-thunmbnail">
+								<img className="image-news" src={imagenews9} />
+							</div>
+							<div className="caption-news">
+								<div className="title-news"><h1>PDAM Badung Pindahkan Interkoneksi Pipa</h1></div>
+								<div className="date-news">19 Maret 2018 </div>
+							</div>
+						</NavLink>	
+					</div>
+				</div>
+            </article> 
+			<article>
+				<div className="block-news">
+					<div className="list-news">
+					<NavLink tag={RouterNavLink} to="/News/News1/Detail" >
+						<div className="image-news-thunmbnail">
+							<img className="image-news" src={imagenews1} />
+						</div>
+						<div className="caption-news">
+							<div className="title-news"><h1>Proyek pipa HDPE di tambang Emas Martabe</h1></div>
+							<div className="date-news">20 Januari 2018</div>
+						</div>
+					</NavLink>
+					</div>
+					<div className="list-news">
+					<NavLink tag={RouterNavLink} to="/News/News1/Detail" >
+						<div className="image-news-thunmbnail">
+							<img className="image-news" src={imagenews6} />
+						</div>
+						<div className="caption-news">
+							<div className="title-news"><h1>Pemain Asing Incar Pasar Produk Pipa di Indonesia</h1></div>
+							<div className="date-news">19 November 2017</div>
+						</div>
+					</NavLink>	
+					</div>
+					<div className="list-news">
+					<NavLink tag={RouterNavLink} to="/News/News1/Detail" >
+						<div className="image-news-thunmbnail">
+							<img className="image-news" src={imagenews5} />
+						</div>
+						<div className="caption-news">
+							<div className="title-news"><h1>Pemasangan Pipa HDPE, Solusi Kebocoran Pipa di Tegal Gede</h1></div>
+							<div className="date-news">08 Oktober 2017</div>
+						</div>
+					</NavLink>	
+					</div>
+					<div className="list-news">
+					<NavLink tag={RouterNavLink} to="/News/News1/Detail" >
+						<div className="image-news-thunmbnail">
+							<img className="image-news" src={imagenews3} />
+						</div>
+						<div className="caption-news">
+							<div className="title-news"><h1>25 Batang Pipa HDPE Segera Masuk Area Relokasi Bojong Koneng</h1></div>
+							<div className="date-news">07 Februari 2018</div>
+						</div>
+					</NavLink>	
+					</div>
+				</div>
             </article>
         </FlipPage>
         </div>
     );
   }
 }
-
-class Submenu extends Component{
-    render(){
-        return (
-            <div>
-                <label className="rb-switcher"><input type="checkbox" name="hak[]" value="42" /><i></i> Dashboard</label>
-            </div>
-        )
-    }
-}
-class Mainview extends Component {
-	
-  render() {
-    return (
-        <div>
-         <Submenu /> 
-         <Content />        
-        </div> 
-    );
-  }
-}  
-export default Mainview;
+export default Content;
