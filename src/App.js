@@ -83,9 +83,28 @@ class Tab extends Component{
 ///////////////
 
 class Product extends Component {
-	
+	constructor(props) {
+		super(props);
+	}
+	route_content(url1,url2) {
+			url1=url1===undefined?'':url1;
+			url2=url2===undefined?'':url2;
+
+				if(url1==''){
+					return <Hal1 />;
+				}
+				if(url1=='Hal1'){
+					return <Hal1 />;
+				}
+				if(url1=='Hal2'){
+					return <Hal2 />;
+				}
+	}
 	
 	render(){
+		const url1 = this.props.match.params.url1
+		const url2 = this.props.match.params.url2	
+		console.log(this.props);	
 		const data = {
 			points: {
 			  total: [
@@ -97,25 +116,42 @@ class Product extends Component {
 			}
 		  }  	
 		return(
-			<Router>
 			<div>
 				<div id="menu-box-id" className="menu-box">
 					<Tabs  data={ data } />
 				</div> 
-				 <Switch>
-				 		 <Route exact path='/Product' component={Hal1} />
-						 <Route exact path='/Product/Hal1' component={Hal1} />
-						 <Route exact path='/Product/Hal2' component={Hal2} />
-				 </Switch>
-			 </div>
-		 </Router>
+				{this.route_content(url1,url2)}
+			 </div> 
 		);
 	}
 }
+
 class News extends Component {
 	
-	
+	constructor(props) {
+		super(props);
+	}
+	route_content(url1,url2) {
+				url1=url1===undefined?'':url1;
+				url2=url2===undefined?'':url2;
+				if(url1==''){
+					return <News1 />;
+				}
+				if(url1=='News1'){
+					return <News1 />;
+				}
+				if(url1=='News2'){
+					return <News2 />;
+				}
+				if(url2=='Detail'){
+					return <News1Detail />;
+				}
+	}
 	render(){
+	
+	const url1 = this.props.match.params.url1
+	const url2 = this.props.match.params.url2
+	console.log(this.props);	
 		const data = {
 			points: {
 			  total: [
@@ -123,23 +159,23 @@ class News extends Component {
 				{ id: 2, name: 'news2', text: 'Politik', link: '/News/News2' },
 			  ]
 			}
-		  }  	
-		return(
-			<Router>
-			<div>
-				<div id="menu-box-id" className="menu-box">
-					<Tabs  data={ data } />
-				</div> 
-				 <Switch>
+		}
+	/*
+	<Switch>
 				 		 <Route exact path='/' component={News1} />
 						 <Route exact path='/News' component={News1} />
 						 <Route exact path='/News/News1' component={News1} />
 						 <Route exact path='/News/News2' component={News2} />
 						 <Route exact path='/News/News1/Detail' component={News1Detail} />
-						 
 				 </Switch>
-			 </div>
-		 </Router>
+	*/			 
+		return(
+		<div>
+			<div id="menu-box-id" className="menu-box">
+				<Tabs  data={ data } />
+			</div> 
+			{this.route_content(url1,url2)} 
+		</div>	
 		);
 	}
 }
@@ -157,6 +193,10 @@ class App extends Component {
 				 		 <Route exact path='/' component={News} />
 						 <Route exact path='/News' component={News} />
 						 <Route exact path='/Product' component={Product} />						 
+						 <Route exact path='/News/:url1' component={News} />
+						 <Route exact path='/News/:url1/:url2' component={News} />
+						 <Route exact path='/Product/:url1' component={Product} />						 
+						 <Route exact path='/Product/:url1/:url2' component={Product} />						 
 				 </Switch>
 		 
       </div>
