@@ -52,7 +52,7 @@ class Tab extends Component{
 	geserMenu(hal){
 		//element=document.getElementById("menu-box-id");
 		//jarak=document.getElementById("menu-box-id").scrollLeft=document.getElementById("menu-box-id").scrollLeft+document.getElementById(hal).getBoundingClientRect().left;
-		var jarak=document.getElementById("menu-box-id").scrollLeft+document.getElementById(hal).getBoundingClientRect().left-15;
+		var jarak=document.getElementById("menu-box-id").scrollLeft+document.getElementById(hal).getBoundingClientRect().left-30;
 		
 		document.getElementById("menu-box-id").scrollTo({
 			'behavior': 'smooth',

@@ -102,7 +102,8 @@ h3 {
 }
 
 article {
-    min-height: calc(100vh - 189px);
+    min-height: calc(100vh - 199px);
+	padding: 0 15px;
 }
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: #ffff9a !important;
@@ -115,7 +116,7 @@ article {
 }
 table{color:#000}
 .filter-pipa+div > div {
-    height: calc(100vh - 189px) !important;
+    height: calc(100vh - 199px) !important;
 	width:100% !important;
 }
 .article-2 {
@@ -221,7 +222,7 @@ label.rb-switcher.right-position {
 }
 .navbar-collapse a {
     text-align: left;
-    padding: 10px 20px !important;
+    padding: 10px 10px !important;
 	font-family:'Passion One', cursive;
     display: block;
 	font-size:15pt;
@@ -292,8 +293,8 @@ button.navbar-toggler {
 	top:auto
 }
 #menu-box-id+div > div:last-child > div {
-    width: 100% !important;
-	height:calc(100vh - 149px) !important;
+    /* width: 100% !important; */
+	/* height:calc(100vh - 149px) !important; */
 }
 .image-news {
     height: auto;
@@ -423,3 +424,20 @@ body .page-news > div,body .page-news > div > div,#menu-box-id+div.page-news > d
 .bg-white-full .row {
     margin-bottom: 30px;
 }
+
+.collapse.navbar-collapse {
+    display: block !important;
+    float: right;
+    width: auto;
+    flex-basis: auto;
+    flex-grow: 0;
+    position: relative !important;
+}
+button.navbar-toggler {
+    display: none;
+}
+ul.ml-auto.navbar-nav {
+    flex-direction: row;
+    box-shadow: none;
+}
+.navbar-collapse a{border:0}
